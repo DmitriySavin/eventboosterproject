@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+  --font-family: "Montserrat", sans-serif;
+}
+
+.cards {
+    display: flex;
+    width: 946px;
+    height: 1760px;
+}
+
+.card {
+    width: 196px;
+    height: 312px;
+    background-color: #343434;
+    margin-left: 50px;
+}
+
+.card-text {
+    font-family: var(--font-family);
+font-weight: 700;
+font-size: 16px;
+text-align: center;
+color: #dc56c5;
+}
+
+.backdrop.is-hidden {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.modal {
+    display: flex;
+    border-radius: 300px 0;
+width: 930px;
+height: 1023px;
+background-color: #fff2fd;
+}
+
+.atlas-img {
+    width: 132px;
+height: 132px;
+border-radius: 50%;
+}
+
+.exit-button {
+    opacity: 0;
+}
