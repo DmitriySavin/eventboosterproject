@@ -1,0 +1,33 @@
+.header {
+  width: 1280px;
+  // background: url('/src/images/pic.png') lightgray 0px -200px / 100% 200% no-repeat;
+  height: 446px;
+  background-image: url('/src/images/pic.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+
+body {
+margin: 0 auto;
+background-image:
+url('/src/images/decor.png'),
+url('/src/images/bgBody.jpg');
+background-repeat: no-repeat, no-repeat;
+background-position: center top, center center;
+background-size: contain, cover;
+  // @media screen and (min-width: 768px) {
+  //   width: 768px;
+  //   height: 1280px;
+  // }
+  // @media screen and (min-width: 1200px) {
+  //   width: 1200px;
+  //   height: 1930px;
+  // }
+  // @media screen and (min-width: 480px) {
+  //   width: 320px;
+  //   height: 2786px;
+  // }
+}
