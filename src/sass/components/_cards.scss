@@ -1,0 +1,52 @@
+/* телефон */
+@media (min-width: 270px) {
+  #cards-container {
+    gap: 30px 4px; /* вертикально 30px, горизонтально 10px */
+  }
+
+  .card {
+    width: 138px;
+    height: 242px;
+  }
+
+  .cards__img {
+    width: 128px;
+    height: 161px;
+  }
+}
+
+/* планшет */
+@media (min-width: 594px) {
+  #cards-container {
+    gap: 45px 13px; /* вертикально 40px, горизонтально 20px */
+  }
+
+  .card {
+    width: 196px;
+    height: 312px;
+  }
+
+  .cards__img {
+    width: 180px;
+    height: 227px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .cards__img {
+    width: 180px; //196
+    height: 227px; //312
+  }
+
+  #cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 56px;
+    justify-content: center;
+  }
+
+  .card {
+    flex-basis: calc((100% - 3 * 56px) / 4);
+    outline: 2px red solid;
+  }
+}
