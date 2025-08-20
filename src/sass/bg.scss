@@ -1,6 +1,4 @@
 .header {
-/* 1. Базові стилі для мобільних (до 768px) */
-
   // background: url('/src/images/pic.png') lightgray 0px -200px / 100% 200% no-repeat;
   background-image: url('/src/images/pic.png');
   background-repeat: no-repeat;
@@ -17,7 +15,7 @@ url('/src/images/decor.png'),
 url('/src/images/bgBody.jpg');
 background-repeat: no-repeat, no-repeat;
 background-position: center top, center center;
-background-size: contain, cover;
+background-size: contain, cover;  
 }
 
 .header {
