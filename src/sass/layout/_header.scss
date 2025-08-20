@@ -69,3 +69,14 @@ body {
   background: rgba(255, 255, 255, 0.15); 
   backdrop-filter: blur(10px);
 }
+
+.header-country-bar {
+  position: relative;
+}
+
+.header-icon {
+  position: absolute;
+    top: 21px;
+    // right: 20px;
+    left: 295px;
+}
