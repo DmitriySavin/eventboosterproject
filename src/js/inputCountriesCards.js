@@ -1,11 +1,12 @@
-import cardTemplate from '../js/templates/cards.hbs';
+import cardTemplate from './templates/cards.hbs';
 
 function renderCards(events) {
   const container = document.querySelector('.cards-container');
   container.innerHTML = '';
 
   if (!events.length) {
-    container.innerHTML = '<p>Ничего не найдено</p>';
+    container.innerHTML =
+      '<p class="null-title">За цим запитом немає запланованих подій!</p>';
     return;
   }
 

@@ -1,4 +1,5 @@
-import renderCards from './renderCards.js';
+import renderCards from './inputCountriesCards.js';
+import templatesCards from './templates/cards.hbs'
 
 const countries = [
   { value: 'AD', label: 'Andorra' },
@@ -127,10 +128,10 @@ export default class NewApiCountry {
 }
 
 const listRef = document.querySelector('.list');
-const imgRef = document.querySelector('.img');
-const continerRef = document.querySelector('.container');
+const imgRef = document.querySelector('.header-icon');
+const continerRef = document.querySelector('.container-input');
 
-const inputRef = document.querySelector('.input');
+const inputRef = document.querySelector('.country-icon');
 
 inputRef.addEventListener('click', () => {
   continerRef.classList.add('is-active');
@@ -170,7 +171,8 @@ function renderList() {
     const p = document.createElement('p');
     p.textContent = el.label;
     p.style.color = 'black';
-    p.style.textAlign = 'center';
+      p.style.textAlign = 'center';
+      p.style.padding = '10px';
 
     li.id = el.value;
     li.appendChild(p);
@@ -184,4 +186,45 @@ renderList();
 
 const api = new NewApiCountry();
 
-console.log(api.searchValue);
+// console.log(api.searchValue);
+
+
+// const loadMoreBtn = document.querySelector('.pagination-btn');
+// const cardsContainer = document.querySelector('.cards-container');
+
+// loadMoreBtn.addEventListener('submit', onLoadMore);
+
+// function onSearch(event) {
+//   event.preventDefault();
+//  searchMoreBtn.query = event.currentTarget.elements.query.value;
+
+//   // console.log(query);
+//   searchMoreBtn.resetPage();
+
+//   NewApiCountry.fetchArticles().then(cards => {
+//     console.log(cards);
+
+//     clearArticlesContainer();
+
+//     appendArticlesMarkup(cards);
+//   });
+// }
+
+// const newApiCountry = new NewApiCountry();
+
+
+// function onLoadMore() {
+//   newApiCountry.fetchCards().then(cards => {
+//     appendArticlesMarkup(cards);
+//   });
+// }
+
+// function appendArticlesMarkup(cards) {
+
+
+//   cardsContainer.insertAdjacentHTML('beforeend', templatesCards(cards));
+// }
+
+// function clearArticlesContainer() {
+//   cardsContainer.innerHTML = '';
+// }

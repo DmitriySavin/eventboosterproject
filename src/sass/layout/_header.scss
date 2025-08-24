@@ -12,7 +12,7 @@
   position: absolute;
     top: 19px;
     /* // right: 20px; */
-    left: 295px;
+    left: 285px;
 }
 .searchh {
    left: 370px;
@@ -61,6 +61,22 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 130px;
+}
+
+.header-css {
+    position: relative;
+      // height: 500px;
+      /* твоя высота */
+      background: url("/src/images/pic\ \(1\).png") no-repeat center top / cover;
+    
+      /* маска */
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+    
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+      mask-repeat: no-repeat;
+      mask-size: 100% 100%;
 }
 
 .header::before {
