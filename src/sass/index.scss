@@ -1,7 +1,6 @@
-@import './common';
-@import './example';
-@import './base/reset';
-@import './base/container';
-@import './base/tupography';
-
-
+// @import './common';
+// @import './example';
+@use './base/reset' as *;
+@use './base/container' as *;
+@use './base/tupography' as *;
+@use './components/cards' as *;
