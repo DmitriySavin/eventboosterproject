@@ -1,13 +1,7 @@
-// @import './common';
-// @import './example';
-@use './base/reset' as *;
-@use './base/container' as *;
-@use './base/tupography' as *;
+@import './common';
+@import './example';
+@import './base/reset';
+@import './base/container';
+@import './base/tupography';
 
-@use './layout/header' as *;
-@use './inputCountries' as *;
-@use './pagination' as *;
-@use './bg.scss' as *;
-
-// @use "..." as *;
 
