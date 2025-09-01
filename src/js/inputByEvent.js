@@ -1,10 +1,10 @@
-import eventTpl from "./templates/event"; 
-import EventApiService from "./apiService";
+import eventTpl from "../templates/event.hbs"; 
+import EventApiService from "./apiService.js";
 
 const refs = {
-  container: document.querySelector(".cards-container"),
-  input: document.querySelector("#search-input"),
-  button: document.querySelector("#search-button"),
+  container: document.querySelector('#cards-container'),
+  input: document.querySelector('.search-icon'),
+  button: document.querySelector('.header-icon'),
 };
 
 const eventApiService = new EventApiService();
@@ -15,6 +15,7 @@ function onSearch(e) {
   e.preventDefault();
   const query = refs.input.value.trim();
   if (!query) return;
+
 
   eventApiService.query = query;
   eventApiService.resetPage();

@@ -1,4 +1,4 @@
-import cardTemplate from './templates/cards.hbs';
+import cardTemplate from '../templates/cards.hbs';
 
 const loadMoreBtn = document.querySelector('.loadMoreBtn');
 
@@ -7,7 +7,7 @@ function renderCards(events, append = false) {
 
   if (!events.length && !append) {
     container.innerHTML =
-      '<p class="null-title">За цим запитом немає запланованих подій!</p>';
+      '<p class="null-title">There are no planned events according you request!</p>';
     if (loadMoreBtn) {
       loadMoreBtn.style.display = 'none';
     } 
@@ -25,6 +25,8 @@ function renderCards(events, append = false) {
     )
     .join('');
 
+  console.log(markup)
+  
   if (append) {
     container.insertAdjacentHTML('beforeend', markup);
   } else {

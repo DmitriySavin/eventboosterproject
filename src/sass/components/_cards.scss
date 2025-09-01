@@ -12,12 +12,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px 4px;
+    gap: 30px 14px;
     /* вертикально 30px, горизонтально 10px */
   }
 
   .card {
-    flex-basis: calc((100% - 1 * 4px) / 2);
+    flex-basis: calc((100% - 1 * 14px) / 2);
     /* бо 2 картки + 1 gap */
   }
 

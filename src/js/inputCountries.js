@@ -1,5 +1,5 @@
 import renderCards from './inputCountriesCards.js';
-import templatesCards from './templates/cards.hbs'
+import templatesCards from '../templates/cards.hbs'
 
 const countries = [
   { value: 'AD', label: 'Andorra' },

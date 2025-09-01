@@ -1,9 +1,11 @@
 @media screen and (min-width: 270px) {
   .cards-container {
-    width: 330px;
+    // width: 330px;
     padding: 0;
-    row-gap: 30px;
+gap: 30px 4px;;
     margin: 0 auto;
+
+    
   }
 
   .list-card {
@@ -13,7 +15,7 @@
   }
 
   .card__image {
-    height: 161px;
+    height: 200px;
   }
 
   .card__title {
@@ -32,6 +34,7 @@
 @media screen and (min-width: 594px) {
   .cards-container {
     width: 654px;
+    gap: 45px 13px;
   }
 
   .list-card {
@@ -56,6 +59,7 @@
 @media screen and (min-width: 1050px) {
   .cards-container {
     width: 1110px;
+    gap: 50px 18px;
   }
 
   .list-card {

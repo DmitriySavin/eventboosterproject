@@ -17,7 +17,9 @@
 .searchh {
    left: 370px;
 }
-
+.header-inputs {
+  row-gap: 30px;
+}
 }
 
 @media screen and (min-width: 768px) {
@@ -31,7 +33,10 @@
     left: 295px;
 }
 
-
+.header-inputs {
+ row-gap: 0;
+ column-gap: 30px;
+}
 }
 
 @media screen and (min-width: 1200px){
@@ -109,7 +114,7 @@ body {
 
 .header-inputs {
   display: flex;
-  gap: 30px;
+  
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -130,4 +135,8 @@ body {
 
 .header-country-bar {
   position: relative;
+}
+
+.search-icon, .country-icon {
+  color: #ff59c5;
 }
