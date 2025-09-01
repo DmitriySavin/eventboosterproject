@@ -7,7 +7,7 @@ body {
 }
 
 .bacground {
-  // background-image: url("/src/images/pic.png");
+  background-image: url("/src/images/pic.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -16,18 +16,18 @@ body {
 
 .bacground {
   width: 320px;
-  height: 364px;
+  // height: 364px;
 }
 
 @media screen and (min-width: 768px) {
   .bacground {
     width: 768px;
-    height: 364px;
+    // height: 364px;
   }
 }
 @media screen and (min-width: 1200px) {
   .bacground {
     width: 1280px;
-    height: 446px;
+    // height: 446px;
   }
 }/*# sourceMappingURL=bg.css.map */

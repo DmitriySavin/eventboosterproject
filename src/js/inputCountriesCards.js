@@ -1,12 +1,16 @@
 import cardTemplate from './templates/cards.hbs';
 
-function renderCards(events) {
-  const container = document.querySelector('.cards-container');
-  container.innerHTML = '';
+const loadMoreBtn = document.querySelector('.loadMoreBtn');
 
-  if (!events.length) {
+function renderCards(events, append = false) {
+  const container = document.querySelector('.cards-container');
+
+  if (!events.length && !append) {
     container.innerHTML =
       '<p class="null-title">За цим запитом немає запланованих подій!</p>';
+    if (loadMoreBtn) {
+      loadMoreBtn.style.display = 'none';
+    } 
     return;
   }
 
@@ -21,7 +25,14 @@ function renderCards(events) {
     )
     .join('');
 
-  container.innerHTML = markup;
+  if (append) {
+    container.insertAdjacentHTML('beforeend', markup);
+  } else {
+    container.innerHTML = markup;
+  }
+
+  // если карточки появились → показать кнопку
+  if (loadMoreBtn) loadMoreBtn.style.display = 'block';
 }
 
 export default renderCards;

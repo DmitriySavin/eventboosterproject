@@ -1,25 +1,46 @@
-.pagination-list {
-    display: flex;
-    column-gap: 5px;
-        justify-content: center;
-}
+// #pagination {
+//     text-align: center;
+//     margin-top: 50px;
+// }
+// .tui-page-btn {
+//     color: white;
+//     padding-right: 5px;
+// }
 
-.pagination-item {
-    color: white;
-    background-color: transparent;
-        border: none;
-        font-family: var(--font-family);
-            font-weight: 400;
-            font-size: 16px;
-            text-align: center;
-            
-}
+// .tui-page-btn:hover {
+//     // border: 1px solid #dc56c5;
+//     // border-radius: 10px 0;
+//     color: #dc56c5;
+// }
 
-.pagination-item:focus {
-    content: '';
+// .tui-ico-next {
+//     padding-right: 10px;
+//     padding-left: 5px;
+// }
+
+
+// .tui-ico-prev {
+//     padding-left: 10px;
+//         padding-right: 10px;
+// }
+
+
+.loadMoreBtn {
+font-family: var(--font-family);
+    text-align: center;
     color: #dc56c5;
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 400;
     border: 1px solid #dc56c5;
-        border-radius: 10px 0;
-        width: 30px;
-        height: 30px;
+    border-radius: 30px 0;
+    background-color: transparent;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: none;
+}
+
+.load-btn__display {
+        display: block;
 }

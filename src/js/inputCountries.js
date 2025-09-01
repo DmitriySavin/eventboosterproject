@@ -114,7 +114,7 @@ export default class NewApiCountry {
 
     const response = await fetch(url);
     const data = await response.json();
-    this.page++;
+    this.page += 1;
     return data._embedded?.events || [];
   }
 
@@ -163,6 +163,7 @@ function renderList() {
   }
 
   const frag = document.createDocumentFragment();
+const containerBaseCards = document.querySelector('.cards');
 
   for (const el of filteredCountries) {
     const li = document.createElement('li');
@@ -177,7 +178,13 @@ function renderList() {
     li.id = el.value;
     li.appendChild(p);
     frag.appendChild(li);
-  }
+
+    li.addEventListener('click', () => {
+      containerBaseCards.classList.add('cards-display__none');
+      loadMoreBtn.classList.add('load-btn__display');
+    
+    })
+  } 
   listRef.appendChild(frag);
 }
 
@@ -186,45 +193,14 @@ renderList();
 
 const api = new NewApiCountry();
 
-// console.log(api.searchValue);
+const loadMoreBtn = document.querySelector('.loadMoreBtn');
 
-
-// const loadMoreBtn = document.querySelector('.pagination-btn');
-// const cardsContainer = document.querySelector('.cards-container');
-
-// loadMoreBtn.addEventListener('submit', onLoadMore);
-
-// function onSearch(event) {
-//   event.preventDefault();
-//  searchMoreBtn.query = event.currentTarget.elements.query.value;
-
-//   // console.log(query);
-//   searchMoreBtn.resetPage();
-
-//   NewApiCountry.fetchArticles().then(cards => {
-//     console.log(cards);
-
-//     clearArticlesContainer();
-
-//     appendArticlesMarkup(cards);
-//   });
-// }
-
-// const newApiCountry = new NewApiCountry();
-
-
-// function onLoadMore() {
-//   newApiCountry.fetchCards().then(cards => {
-//     appendArticlesMarkup(cards);
-//   });
-// }
-
-// function appendArticlesMarkup(cards) {
-
-
-//   cardsContainer.insertAdjacentHTML('beforeend', templatesCards(cards));
-// }
-
-// function clearArticlesContainer() {
-//   cardsContainer.innerHTML = '';
-// }
+loadMoreBtn.addEventListener('click', () => {
+  api.fetchCards().then(events => {
+    if (!events.length) {
+      loadMoreBtn.style.display = 'none'; 
+      return;
+    }
+    renderCards(events, true); 
+  });
+});
