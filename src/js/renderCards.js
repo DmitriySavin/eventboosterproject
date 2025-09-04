@@ -1,5 +1,5 @@
-import eventTpl from "./templates/event";
-import EventApiService from "./apiService";
+import eventTpl from "./templates/event.hbs";
+import EventApiService from "./apiService.js";
 
 
 const refs = {

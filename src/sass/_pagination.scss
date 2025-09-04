@@ -1,0 +1,31 @@
+.loadMoreBtn {
+font-family: var(--font-family);
+    text-align: center;
+    color: #dc56c5;
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #dc56c5;
+    border-radius: 30px 0;
+    background-color: transparent;
+    margin: 0 auto;
+
+    display: none;
+}
+
+.load-btn__display {
+        display: block;
+}
+
+@media screen and (min-width: 480px) {
+.loadMoreBtn {
+    margin-top: 60px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+    .loadMoreBtn {
+        margin-top: 80px;
+    }
+}

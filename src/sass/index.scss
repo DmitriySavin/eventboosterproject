@@ -1,6 +1,9 @@
-// @import './common';
-// @import './example';
 @use './base/reset' as *;
 @use './base/container' as *;
 @use './base/tupography' as *;
+@use './layout/header' as *;
 @use './components/cards' as *;
+@use './inputCountries' as *;
+@use './pagination' as *;
+@use './bg.scss' as *;
+@use './last-text' as *;

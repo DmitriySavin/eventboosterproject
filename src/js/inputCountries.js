@@ -1,4 +1,5 @@
-import renderCards from './renderCards.js';
+import renderCards from './inputCountriesCards.js';
+import templatesCards from '../templates/cards.hbs'
 
 const countries = [
   { value: 'AD', label: 'Andorra' },
@@ -113,7 +114,7 @@ export default class NewApiCountry {
 
     const response = await fetch(url);
     const data = await response.json();
-    this.page++;
+    this.page += 1;
     return data._embedded?.events || [];
   }
 
@@ -127,10 +128,10 @@ export default class NewApiCountry {
 }
 
 const listRef = document.querySelector('.list');
-const imgRef = document.querySelector('.img');
-const continerRef = document.querySelector('.container');
+const imgRef = document.querySelector('.header-icon');
+const continerRef = document.querySelector('.container-input');
 
-const inputRef = document.querySelector('.input');
+const inputRef = document.querySelector('.country-icon');
 
 inputRef.addEventListener('click', () => {
   continerRef.classList.add('is-active');
@@ -162,6 +163,7 @@ function renderList() {
   }
 
   const frag = document.createDocumentFragment();
+const containerBaseCards = document.querySelector('.cards');
 
   for (const el of filteredCountries) {
     const li = document.createElement('li');
@@ -170,12 +172,19 @@ function renderList() {
     const p = document.createElement('p');
     p.textContent = el.label;
     p.style.color = 'black';
-    p.style.textAlign = 'center';
+      p.style.textAlign = 'center';
+      p.style.padding = '10px';
 
     li.id = el.value;
     li.appendChild(p);
     frag.appendChild(li);
-  }
+
+    li.addEventListener('click', () => {
+      containerBaseCards.classList.add('cards-display__none');
+      loadMoreBtn.classList.add('load-btn__display');
+    
+    })
+  } 
   listRef.appendChild(frag);
 }
 
@@ -184,4 +193,14 @@ renderList();
 
 const api = new NewApiCountry();
 
-console.log(api.searchValue);
+const loadMoreBtn = document.querySelector('.loadMoreBtn');
+
+loadMoreBtn.addEventListener('click', () => {
+  api.fetchCards().then(events => {
+    if (!events.length) {
+      loadMoreBtn.style.display = 'none'; 
+      return;
+    }
+    renderCards(events, true); 
+  });
+});
